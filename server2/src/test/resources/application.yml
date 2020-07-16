@@ -1,0 +1,5 @@
+pactbroker:
+  host: "tossbank.pactflow.io"
+  scheme: "https"
+  auth:
+    token: "<pact-broker-token>"
