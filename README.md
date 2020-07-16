@@ -9,6 +9,11 @@
 요구사항(pacts)을 `server2`에게 전달하고 이것이 만족되면 배포한다. `server2`는
 `frontend`와 `server1`의 pacts를 만족시키고 그 사실을 보고한다.
 
+```
+frontend ---> server2
+server1  ---> server2
+```
+
 ### 준비
 
 #### Pact Broker CLI 설치
