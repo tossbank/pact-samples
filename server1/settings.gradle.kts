@@ -1,1 +1,1 @@
-rootProject.name = "pact-poc-consumer"
+rootProject.name = "server1"
