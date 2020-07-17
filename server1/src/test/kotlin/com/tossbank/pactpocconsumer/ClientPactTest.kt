@@ -41,7 +41,7 @@ class ClientPactTest {
     }
 
     @Test
-    fun pactWithOurProvider(mockServer: MockServer) {
+    fun pactWithServer2(mockServer: MockServer) {
         RestAssured
             .given()
             .baseUri(mockServer.getUrl() + "/provider.json")
