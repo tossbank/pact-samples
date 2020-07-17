@@ -27,6 +27,7 @@ dependencies {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
 	testImplementation("au.com.dius.pact.provider:junit5spring:4.1.2")
+	testImplementation("au.com.dius.pact.provider:junit5:4.1.2")
 }
 
 tasks.withType<Test> {
