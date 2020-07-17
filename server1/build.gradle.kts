@@ -1,5 +1,3 @@
-import au.com.dius.pact.provider.gradle.PactBrokerConsumerConfig
-import au.com.dius.pact.provider.gradle.PactBrokerConsumerConfig.latestTags
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -30,6 +28,7 @@ dependencies {
 	}
 	testImplementation("au.com.dius.pact.consumer:junit5:4.1.0")
 	testImplementation("io.rest-assured:rest-assured:3.3.0")
+	implementation("com.google.code.gson:gson:2.8.5")
 }
 
 tasks.withType<Test> {
