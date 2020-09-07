@@ -20,7 +20,7 @@ server1  ---> server2
 
 pacts가 준수되어 배포가 가능한지 확인하려면 pact-broker cli를 설치해야한다.
 
-    brew install pact-broker-client
+    sudo gem install pact_broker-client
 
 #### Pact Broker API 키
 
