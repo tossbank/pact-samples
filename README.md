@@ -92,3 +92,14 @@ token (CI) 토큰으로 변경한다.
 
     pact-broker can-i-deploy --broker-base-url=tossbank.pactflow.io -k '<your-broker-token>' --pacticipant=frontend --latest
     pact-broker can-i-deploy --broker-base-url=tossbank.pactflow.io -k '<your-broker-token>' --pacticipant=server1 --latest
+
+## Troubleshooting
+
+### pactVerify 실행시 WARNING: There are no consumers to verify for provider
+
+멀티프로젝트의 경우 프로젝트 루트에서 `pactVerify` 태스크를 실행하면 동작하지
+않는 버그가 있다. 이 문제를 피하려면 다음과 같이 해당 서브프로젝트의 디렉토리에
+가서 task를 실행해야한다.
+
+    cd myproj1
+    ../gradlew pactVerify
