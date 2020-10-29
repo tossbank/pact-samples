@@ -14,6 +14,10 @@ frontend ---> server2
 server1  ---> server2
 ```
 
+또한 server1은 server2가 발행하는 kafka message를 consume한다.  (주의: 이
+샘플에서는 실제로 kafka message를 produce하거나 consume하는 코드는 작성되어있지
+않으며, 오직 그에 대한 pact를 생성하고 검증하는 코드만 작성되어있다)
+
 ### 준비
 
 #### Pact Broker CLI 설치
