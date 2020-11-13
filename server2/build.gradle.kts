@@ -51,6 +51,15 @@ pact {
 
     // See https://docs.pact.io/implementation_guides/jvm/provider/gradle/#2-define-the-pacts-between-your-consumers-and-providers
     serviceProviders {
+        create("server2-producer") {
+            verificationType = ANNOTATED_METHOD
+            packagesToScan = listOf("com.tossbank.pact.samples.server2")
+
+            fromPactBroker(closureOf<PactBrokerConsumerConfig> {
+                this.selectors = latestTags("live")
+            })
+        }
+
         create("server2") {
             // API provider 설정. ./gradlew pactVerify 하면 이 서버가 pact를 준수하는지 검사한다.
             protocol = "http"
